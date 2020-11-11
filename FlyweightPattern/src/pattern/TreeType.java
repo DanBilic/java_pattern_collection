@@ -1,4 +1,4 @@
-package motivation;
+package pattern;
 
 public enum TreeType {
     TANNE, BIRKE
