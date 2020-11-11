@@ -2,6 +2,7 @@ import motivation.Airplane;
 import motivation.AirportSystem;
 import motivation.Hotel;
 import motivation.LocalLogisticsCompany;
+import pattern.FacadeLuggageManagement;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,7 @@ public class Main {
         // ---------------- motivation -------------------------
         // Client muss alle Klassen des Systems und dere Methoden kennen
         // lösung Facade Pattern -> Client arbeitet mit Schnittstelle und stäßt prozess nur an
+
         AirportSystem airport = new AirportSystem();
         airport.checkLuggage();
         airport.transportToAirplane();
@@ -26,7 +28,11 @@ public class Main {
 
 
 
+
+
         // -------------- Facade Pattern ---------------
-        
+        FacadeLuggageManagement bookingSystem = new FacadeLuggageManagement();
+        bookingSystem.sendLuggage();
+
     }
 }
